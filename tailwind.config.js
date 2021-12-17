@@ -3,6 +3,10 @@ module.exports = {
   // mode: 'jit',
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      sans: ['Raleway', 'sans-serif'],
+      serif: ['Astagina', 'serif']
+    },
     extend: {
       colors: {
         //beiges
@@ -23,10 +27,7 @@ module.exports = {
       screens: {
         // big: { min: '800px', max: '868px' },
       },
-      fontFamily: {
-        sans: ['Raleway', 'sans-serif'],
-        serif: ['Antonio Fisher', 'serif'],
-      },
+
     },
     container: {
       center: true,
