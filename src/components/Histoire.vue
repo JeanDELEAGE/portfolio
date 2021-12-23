@@ -31,16 +31,18 @@
           <span class="font-normal text-cream_2 text-base">Date</span>
           <p class="md:text-lg text-cream_1 text-base mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda atque blanditiis consequatur ducimus enim facere fugiat harum magnam nisi quidem quod, reiciendis repellendus voluptates!}</p>
           <div class="flex ju justify-end content-end items-end ">
-            <button class="md:w-1/4 p-2 py-2 bg-orange text-cream_1 rounded-md text-base font-extrabold hover:bg-brown_1">Nos projets</button>
+            <router-link to="/listeprojet" class="md:w-1/4 p-2 py-2 bg-orange rounded-md hover:bg-brown_1 text-center">
+              <button class="text-base font-extrabold text-cream_1 ">Nos projets</button>
+            </router-link>
           </div>
         </div>
         <!-- Image -->
         <div class="flex-col-reverse h-40 w-full md:w-1/3 md:h-auto grid place-items-center bg-cover bg-center bg-no-repeat"
-             :style='{ backgroundImage: `url(http://localhost/wp_solaso/wp-content/uploads/2021/11/sunrise.jpeg)`}'>
+             :style='{ backgroundImage: `url(https://solaso77.fr/wp-content/uploads/2021/11/sunrise.jpeg)`}'>
         </div>
       </div>
 
-      <div class="wrapper">
+      <div class="wrapper max-w-xs md:max-w-7xl">
         <div class="center-line">
           <a href="#" class="scroll-icon"><ion-icon name="chevron-up-outline" class="text-brown_2"></ion-icon>
           </a>

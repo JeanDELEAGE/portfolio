@@ -1,5 +1,5 @@
 <template>
-  <div class="myscrollbar bg-my_white overflow-x-hidden">
+  <div class="myscrollbar bg-my_white overflow-x-hidden bg-cream_1">
 <!--     Bandeau Image -->
     <div class="absolute top-0 left-0 right-0 h-full md:m-0 md:h-96">
       <div class="z-0 h-full w-full relative">
@@ -13,11 +13,11 @@
     </div>
 
     <main class="container flex flex-col mt-64 mb-5 max-w-5xl custom-margin">
-      <h1 class="w-full justify-center text-center font-extrabold text-brown_2 md:text-2xl text-xl mb-5">{{Projet.acf.type_projet.post_title}}</h1>
+      <h1 class="w-full justify-center text-center font-extrabold text-brown_2 md:text-2xl text-xl mb-5">{{Projet.acf.sous_titre_projet}}</h1>
       <!-- Slider -->
       <div class="container flex flex-nowrap flex-col justify-start">
         <div class="min-w-full flex md:flex-col md:flex-wrap" onclick="this.classList.toggle('translate-x-full')">
-          <p class="md:text-lg text-brown_2 text-base mb-3">{{ Projet.acf.introduction }}</p>
+          <p v-html="Projet.acf.introduction" class="md:text-lg text-brown_2 text-base mb-3">{{}}</p>
         </div>
       </div>
     </main>
@@ -34,8 +34,13 @@ export default {
             Projet:{
               id:0,
               acf:{
-                Image_couverture:null,
+                Image_couverture:{
                 url:null,
+                },
+                introduction:null,
+                type_projet:{
+                  post_title:null,
+                },
               }
             },
             listeMission:[],
