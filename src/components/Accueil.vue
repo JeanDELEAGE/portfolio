@@ -71,7 +71,7 @@
       </div>
       <!-- PopUp -->
       <div :class="[display ? 'block m-auto container w-5/6 bg-opacity-30' : 'hidden']">
-        <div class="relative flex flex-col md:flex-row md:space-x-5 shadow-lg ml-5 mr-5 p-0 max-w-2xl lg:max-w-4xl mx-auto bg-white mb-8">
+        <div class="relative flex flex-col md:flex-row md:space-x-5 shadow-lg m-auto p-0 max-w-2xl lg:max-w-4xl mx-auto bg-white mb-8">
           <!-- Image -->
           <div class="rounded-full h-36 w-36 m-5 grid place-items-center bg-cover bg-center bg-no-repeat"
                :style='{ backgroundImage: `url(${listeParticipant[currentAvatarId].acf.photo.url})`}'>
