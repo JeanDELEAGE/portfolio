@@ -1,0 +1,49 @@
+<template>
+  <div class="myscrollbar bg-my_white overflow-x-hidden">
+<!--     Bandeau Image -->
+    <div class="absolute top-0 left-0 right-0 h-1/2 md:m-0 md:h-96">
+      <div class="z-0 h-full w-full relative">
+        <div style='background-image: url("https://solaso77.fr/wp-content/uploads/2021/12/DU-VERT-scaled.jpeg")'
+             class="filter brightness-50 bg-no-repeat bg-cover top-0 z-0 bg-top h-full w-full z-0">
+        </div>
+        <div class="top-1/3 absolute z-20 w-full text-center">
+          <h1 v-for="mentions_legales in Mentions" class="font-extrabold text-cream_1 text-4xl pb-5">{{ mentions_legales.acf.titre }}</h1>
+        </div>
+      </div>
+    </div>
+
+    <main class="container pl-8 pr-8 flex flex-col mt-80 mb-5 max-w-5xl" v-for="mentions_legales in Mentions">
+      <p v-html="mentions_legales.acf.contenu" class="md:text-lg text-brown_2 text-base mb-2">{{}}</p>
+    </main>
+  </div>
+</template>
+
+<script>
+import param from '@/param/param'
+
+export default {
+    name: 'Mentions',
+    data () {
+        return {
+            Mentions:[],
+        }
+    },
+    filters: {
+
+    },
+    computed:{
+    },
+
+    created(){
+      axios.get(param.host+"mentions_legales")
+        .then(response=>{
+          // Récupération de la liste des comptes-rendus
+          this.Mentions = response.data;
+        })
+    },
+  methods: {
+  }
+}
+</script>
+<style scoped>
+</style>

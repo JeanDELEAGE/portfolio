@@ -162,7 +162,7 @@ i{
 
 @media(max-width: 790px){
   .wrapper .center-line{
-    left: 40px;
+    left: 20px;
   }
   .wrapper .row{
     margin: 30px 0 3px 60px;
@@ -178,12 +178,14 @@ i{
   }
 }
 @media(max-width: 440px){
-  .wrapper .center-line,
+  .wrapper .center-line{
+    left: 160px;
+  }
   .row section::before,
   .row section .icon{
     display: none;
   }
   .wrapper .row{
-    margin: 10px 0;
+    margin: 25px 0;
   }
 }

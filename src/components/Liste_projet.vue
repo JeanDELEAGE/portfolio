@@ -42,7 +42,7 @@
               <p class="md:text-lg text-brown_2 text-base mb-3">{{ projet.acf.apercu }}</p>
               <div class="flex ju justify-end content-end items-end ">
                 <button class="md:w-2/5 p-2 py-2 bg-orange text-cream_1 rounded-md text-base font-extrabold hover:bg-brown_1">
-                  <router-link :to="{name:'Projet', params: {id: projet.id} }">Découvrir le projet</router-link>
+                  <router-link :to="{name:'Projet', params: {id: projet.id} }" @click="scrollToTop">Découvrir le projet</router-link>
                 </button>
               </div>
             </div>
@@ -64,8 +64,6 @@
           <a :href="compte_rendu.acf.fichier.url" download="">Télécharger</a>
         </button>
       </div>
-
-      <p class="col-12 md:text-lg text-brown_2 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad dolores hic, id itaque minima?</p>
     </aside>
   </div>
 </template>
@@ -107,6 +105,9 @@ export default {
         })
     },
   methods: {
+    scrollToTop() {
+      window.scrollTo(0,0);
+    },
   }
 }
 </script>

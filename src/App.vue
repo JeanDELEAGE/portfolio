@@ -3,10 +3,10 @@
         <!-- navbar -->
         <nav :class="[isActive ? 'flex justify-end text-white w-screen z-20' : 'flex justify-between text-white w-screen z-20']">
           <div :class="[isActive ? 'pl-5 pr-0 xl:px-12 py-6 flex w-full items-center content-center z-20' : 'flex items-center content-center py-6 z-20']">
-            <a :class="[isActive ? 'text-3xl font-bold font-heading z-40' : 'text-3xl font-bold font-heading z-40 pl-5']" href="#">
+            <router-link to="/" :class="[isActive ? 'text-3xl font-bold font-heading z-40' : 'text-3xl font-bold font-heading z-40 pl-5']">
               <img :src="[isActive ? 'https://solaso77.fr/wp-content/uploads/2021/11/logo_white_green.png' : 'https://solaso77.fr/wp-content/uploads/2021/11/logo_white_green.png']"
                    alt="Solaso77" class="w-20 md:w-24" style="min-width: 5em">
-            </a>
+            </router-link>
 
             <!-- Nav Links -->
             <ul id="menu"
@@ -15,8 +15,8 @@
               <router-link to="/"             class="font-sans hover:text-cream_2">Accueil</router-link>
               <router-link to="/listeprojet"  class="font-sans hover:text-cream_2">Nos projets</router-link>
               <router-link to="/histoire"     class="font-sans hover:text-cream_2">Notre histoire</router-link>
-              <router-link to="/contact"             class="font-sans hover:text-cream_2">Nous contacter</router-link>
-              <router-link to="/"             class="min-w-max nav-item nav-link hover:text-cream_2">
+              <router-link to="/contact"      class="font-sans hover:text-cream_2">Nous contacter</router-link>
+              <router-link to="/contact/#donation"             class="min-w-max nav-item nav-link hover:text-cream_2">
                 <button class="bg-orange text-cream_1 rounded-md text-base font-extrabold hover:bg-brown_1 px-3 py-1">Faire un don</button>
               </router-link>
             </ul>
@@ -27,8 +27,8 @@
               <router-link to="/"             class="font-sans text-xl pb-5 font-bold">Accueil</router-link>
               <router-link to="/listeprojet"  class="font-sans text-xl pb-5 font-bold">Nos projets</router-link>
               <router-link to="/histoire"     class="font-sans text-xl pb-5 font-bold">Notre histoire</router-link>
-              <router-link to="/contact"             class="font-sans text-xl pb-5 font-bold">Nous contacter</router-link>
-              <router-link to="/contact #donation"             class="min-w-max nav-item nav-link text-brown_2 text-xl pb-5">
+              <router-link to="/contact"      class="font-sans text-xl pb-5 font-bold">Nous contacter</router-link>
+              <router-link to="/contact/#donation"             class="min-w-max nav-item nav-link text-brown_2 text-xl pb-5">
                 <button class="bg-cream_1 text-orange rounded-md text-xl font-sans p-4 py-2 font-bold">Faire un don</button>
               </router-link>
             </ul>
@@ -62,6 +62,7 @@
               <router-link to="/histoire"     class="font-sans hover:text-cream_2">Notre histoire</router-link>
               <router-link to="/contact"      class="font-sans hover:text-cream_2">Nous contacter</router-link>
               <router-link to="/"             class="font-sans hover:text-cream_2">Politique de confidentialité</router-link>
+              <router-link to="/mention"      class="font-sans hover:text-cream_2">Mentions légales</router-link>
             </div>
           </div>
 

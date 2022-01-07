@@ -6,6 +6,7 @@ import Liste_projet     from '@/components/Liste_projet'
 import Projet           from '@/components/Projet'
 import Histoire         from '@/components/Histoire'
 import Contact          from '@/components/Contact'
+import Mention          from '@/components/Mention'
 
 Vue.use(Router)
 
@@ -15,7 +16,8 @@ export default new Router({
     { path: '/listeprojet',     name: 'Liste_projet',         component: Liste_projet },
     { path: '/projet/:id',      name: 'Projet',               component: Projet },
     { path: '/histoire',        name: 'Histoire',             component: Histoire },
-    { path: '/contact',         name: 'Contact',             component: Contact },
+    { path: '/contact',         name: 'Contact',              component: Contact },
+    { path: '/mention',         name: 'Mention',              component: Mention },
 
   ]
 })
