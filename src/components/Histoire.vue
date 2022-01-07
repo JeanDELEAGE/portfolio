@@ -15,7 +15,9 @@
           </p>
         </div>
         <div class="top-3/4 absolute z-20 w-full text-center">
-          <h2 class="hidden md:w-full md:block md:font-medium md:text-cream_1 md:text-xl md:font-serif ">Projets</h2>
+          <img class="hidden md:w-24 md:block md:font-medium md:text-cream_1 md:text-xl md:font-serif"
+               src="https://solaso77.fr/wp-content/uploads/2022/01/histoire.png" alt="Histoire"
+               style="margin: 0 auto">
         </div>
       </div>
     </div>
@@ -91,6 +93,9 @@ export default {
         })
     },
   methods: {
+    scrollToTop() {
+      window.scrollTo(0,0);
+    },
   }
 }
 </script>
@@ -106,7 +111,7 @@ export default {
 
 @media (min-width: 768px) {
   .custom-margin{
-    margin-top: 48vh;
+    margin-top: 40vh;
   }
 }
 

@@ -25,25 +25,37 @@
       <h2 class="w-full justify-left text-left font-bold text-brown_2 md:text-xl text-lg mb-3 mt-5">À quoi servent les dons ?</h2>
       <p v-html="Projet.acf.les_dons" class="md:text-lg text-brown_2 text-base mb-3">{{}}</p>
     </main>
-    <aside class="w-full h-40 mt-5 mb-8 bg-green_2 flex flex-row space-x-12">
-      <div class="justify-center items-center text-center w-1/3">
-        <p class="font-extrabold text-cream_1 text-2xl pb-5">1</p>
-        <p class="md:text-lg text-cream_2 text-base mb-3">{{Projet.acf.objectif_1}}</p>
-      </div>
-      <div class="justify-center items-center text-center w-1/3">
-        <p class="font-extrabold text-cream_1 text-2xl pb-5">2</p>
-        <p class="md:text-lg text-cream_2 text-base mb-3">{{Projet.acf.objectif_2}}</p>
-      </div>
-      <div class="justify-center items-center text-center w-1/3">
-        <p class="font-extrabold text-cream_1 text-2xl pb-5">3</p>
-        <p class="md:text-lg text-cream_2 text-base mb-3">{{Projet.acf.objectif_3}}</p>
+    <aside class="w-full mt-5 mb-8 bg-green_1">
+      <div class="container flex flex-row space-x-12 items-center pt-3 pb-3">
+        <div class="justify-center items-center text-center w-1/3 shadow-xl bg-green_2">
+          <p class="font-extrabold text-cream_1 text-4xl pb-5">1</p>
+          <p class="md:text-lg text-cream_2 text-base mb-3">{{ Projet.acf.objectif_1 }}</p>
+        </div>
+        <div class="justify-center items-center text-center w-1/3 shadow-xl bg-green_2">
+          <p class="font-extrabold text-cream_1 text-4xl pb-5">2</p>
+          <p class="md:text-lg text-cream_2 text-base mb-3">{{ Projet.acf.objectif_2 }}</p>
+        </div>
+        <div class="justify-center items-center text-center w-1/3 shadow-xl bg-green_2">
+          <p class="font-extrabold text-cream_1 text-4xl pb-5">3</p>
+          <p class="md:text-lg text-cream_2 text-base mb-3">{{ Projet.acf.objectif_3 }}</p>
+        </div>
       </div>
     </aside>
-    <div class="w-full md:pl-5 md:pr-5 flex flex-row flex-nowrap flex-wrap overflow-x-scroll md:overflow-hidden md:flex-wrap mt-5 mb-5 md:max-w-7xl md:justify-center" style="margin: 0 auto">
+    <div class="w-full md:pl-5 md:pr-5 flex flex-row flex-wrap overflow-x-scroll md:overflow-hidden md:flex-wrap mt-5 mb-5 md:max-w-7xl md:justify-center" style="margin: 0 auto">
       <div :style='{ backgroundImage: `url(${galerie.full_image_url})`}' v-for="galerie in Projet.acf.galerie" :key="galerie.id"
            class="bg-no-repeat bg-cover bg-center h-36 md:h-60 w-40 md:w-80 m-3 flex items-end cursor-pointer" @click="legend=!legend">
         <p :class="[legend? 'hidden' : 'inline-block text-center items-center px-5 py-1 text-brown_1 text-lg font-bold bg-my_white']" style="margin: 0 auto">{{galerie.title}}</p>
       </div>
+    </div>
+    <div class="container mb-5">
+      <h2 class="w-full block font-bold md:font-extrabold text-brown_2 text-2xl text-center mt-5 mb-0">Ce projet vous intéresse ?</h2>
+      <router-link to="/contact/#donation" class="hover:text-cream_2 m-5" style="width: min-content">
+        <button
+          class="bg-orange text-cream_1 rounded-md text-base font-extrabold hover:bg-brown_1 px-6 py-3 block"
+          style="margin: 0 auto">Faire un don
+        </button>
+      </router-link>
+      <p class="text-green_2 text-base text-center">Envie de découvrir un autre projet ? <router-link to="/listeprojet" class="font-bold">Découvrir</router-link></p>
     </div>
   </div>
 </template>
@@ -83,6 +95,7 @@ export default {
     },
     computed:{
     },
+
 
     created(){
       this.Projet.id = this.$route.params.id;

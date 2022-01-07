@@ -7,6 +7,7 @@ import Projet           from '@/components/Projet'
 import Histoire         from '@/components/Histoire'
 import Contact          from '@/components/Contact'
 import Mention          from '@/components/Mention'
+import Politique        from '@/components/Politique'
 
 Vue.use(Router)
 
@@ -18,6 +19,7 @@ export default new Router({
     { path: '/histoire',        name: 'Histoire',             component: Histoire },
     { path: '/contact',         name: 'Contact',              component: Contact },
     { path: '/mention',         name: 'Mention',              component: Mention },
+    { path: '/politique',         name: 'Politique',            component: Politique },
 
   ]
 })

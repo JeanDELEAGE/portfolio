@@ -16,7 +16,7 @@
               <router-link to="/listeprojet"  class="font-sans hover:text-cream_2">Nos projets</router-link>
               <router-link to="/histoire"     class="font-sans hover:text-cream_2">Notre histoire</router-link>
               <router-link to="/contact"      class="font-sans hover:text-cream_2">Nous contacter</router-link>
-              <router-link to="/contact/#donation"             class="min-w-max nav-item nav-link hover:text-cream_2">
+              <router-link to="/contact"      class="min-w-max nav-item nav-link hover:text-cream_2">
                 <button class="bg-orange text-cream_1 rounded-md text-base font-extrabold hover:bg-brown_1 px-3 py-1">Faire un don</button>
               </router-link>
             </ul>
@@ -28,7 +28,7 @@
               <router-link to="/listeprojet"  class="font-sans text-xl pb-5 font-bold">Nos projets</router-link>
               <router-link to="/histoire"     class="font-sans text-xl pb-5 font-bold">Notre histoire</router-link>
               <router-link to="/contact"      class="font-sans text-xl pb-5 font-bold">Nous contacter</router-link>
-              <router-link to="/contact/#donation"             class="min-w-max nav-item nav-link text-brown_2 text-xl pb-5">
+              <router-link to="/contact"             class="min-w-max nav-item nav-link text-brown_2 text-xl pb-5">
                 <button class="bg-cream_1 text-orange rounded-md text-xl font-sans p-4 py-2 font-bold">Faire un don</button>
               </router-link>
             </ul>
@@ -48,7 +48,7 @@
           <div class="flex flex-col mt-5 mb-5 pr-3 pl-3">
             <h1 class="text-cream_2 font-semibold text-lg">Nos partenaires</h1>
             <div class="text-my_white flex flex-col ">
-              <a href="#">Électricité Sans Frontière (ESF)</a>
+              <a href="https://electriciens-sans-frontieres.org/" class="cursor-pointer">Électricité Sans Frontière (ESF)</a>
               <a href="#">Gaz De France (GDF)</a>
               <a href="#">Électricité De France (EDF) </a>
             </div>
@@ -57,21 +57,21 @@
           <div class="mt-5 mb-5 pr-3 pl-3">
           <h1 class="text-cream_2 font-semibold text-lg">Plus d'informations</h1>
             <div class="flex flex-col text-my_white">
-              <router-link to="/"             class="font-sans hover:text-cream_2">Accueil</router-link>
-              <router-link to="/listeprojet"  class="font-sans hover:text-cream_2">Nos projets</router-link>
-              <router-link to="/histoire"     class="font-sans hover:text-cream_2">Notre histoire</router-link>
-              <router-link to="/contact"      class="font-sans hover:text-cream_2">Nous contacter</router-link>
-              <router-link to="/"             class="font-sans hover:text-cream_2">Politique de confidentialité</router-link>
-              <router-link to="/mention"      class="font-sans hover:text-cream_2">Mentions légales</router-link>
+              <router-link to="/" @click="scrollToTop"  class="font-sans hover:text-cream_2">Accueil</router-link>
+              <router-link to="/listeprojet"  @click="scrollToTop"           class="font-sans hover:text-cream_2">Nos projets</router-link>
+              <router-link to="/histoire"    @click="scrollToTop"           class="font-sans hover:text-cream_2">Notre histoire</router-link>
+              <router-link to="/contact"   @click="scrollToTop"             class="font-sans hover:text-cream_2">Nous contacter</router-link>
+              <router-link to="/politique"    @click="scrollToTop"          class="font-sans hover:text-cream_2">Politique de confidentialité</router-link>
+              <router-link to="/mention"     @click="scrollToTop"           class="font-sans hover:text-cream_2">Mentions légales</router-link>
             </div>
           </div>
 
           <div class="mt-5 mb-5 pr-3 pl-3">
             <h1 class="text-cream_2 font-semibold text-lg">Prenons contact</h1>
             <div class="text-my_white">
-            <router-link to="/"             class="font-sans hover:text-cream_2">Nous contacter</router-link>
+            <router-link to="/contact"             class="font-sans hover:text-cream_2">Nous contacter</router-link>
             <p>Tél : 06 06 06 06 06</p>
-            <p>solaso77@ikmail.com</p>
+            <a href="mailto:solaso77@ikmail.com">solaso77@ikmail.com</a>
             </div>
           </div>
 

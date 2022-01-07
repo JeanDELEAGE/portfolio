@@ -7,18 +7,18 @@
              class="filter brightness-50 bg-no-repeat bg-cover top-0 z-0 bg-top h-full w-full z-0">
         </div>
         <div class="top-1/3 absolute z-20 w-full text-center">
-          <h1 v-for="mentions_legales in Mentions" class="font-extrabold text-cream_1 text-4xl pb-5">{{ mentions_legales.acf.titre }}</h1>
+          <h1 v-for="politique in Politique" class="font-extrabold text-cream_1 text-4xl pb-5">{{ politique.acf.titre }}</h1>
         </div>
       </div>
     </div>
 
-    <main class="container pl-8 pr-8 flex flex-col mt-80 mb-5 max-w-5xl" v-for="mentions_legales in Mentions">
+    <main class="container pl-8 pr-8 flex flex-col mt-80 mb-5 max-w-5xl" v-for="politique in Politique">
       <router-link to="/" class="hover:text-cream_2 mt-5 mb-5">
         <button @click="scrollToTop"
-          class="bg-gray-300 text-brown_2 rounded-md text-base font-extrabold hover:bg-gray-400 px-3 py-1 block">Retour à l'accueil
+                class="bg-gray-300 text-brown_2 rounded-md text-base font-extrabold hover:bg-gray-400 px-3 py-1 block">Retour à l'accueil
         </button>
       </router-link>
-      <p v-html="mentions_legales.acf.contenu" class="md:text-lg text-brown_2 text-base mb-2">{{}}</p>
+      <p v-html="politique.acf.contenu" class="md:text-lg text-brown_2 text-base mb-2">{{}}</p>
     </main>
   </div>
 </template>
@@ -27,11 +27,11 @@
 import param from '@/param/param'
 
 export default {
-    name: 'Mentions',
+    name: 'Politique',
     data () {
         return {
-            Mentions:[],
-            mentions_legales:{
+            Politique:[],
+            politique:{
               contenu:null,
             },
         }
@@ -43,17 +43,16 @@ export default {
     },
 
     created(){
-      axios.get(param.host+"mentions_legales")
+      axios.get(param.host+"politique")
         .then(response=>{
           // Récupération de la liste des comptes-rendus
-          this.Mentions = response.data;
+          this.Politique = response.data;
         })
     },
-  methods: {
-    scrollToTop() {
-      window.scrollTo(0,0);
-    },
-  }
+    methods: { scrollToTop() {
+        window.scrollTo(0,0);
+      },
+    }
 }
 </script>
 <style scoped>

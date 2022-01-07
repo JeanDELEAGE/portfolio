@@ -1,18 +1,18 @@
 <template>
   <div class="overflow-x-hidden">
     <!-- Bandeau Image -->
-    <div class="absolute top-0 left-0 right-0 w-full h-24 md:m-0 md:h-44 z-0">
+    <div class="absolute top-0 left-0 right-0 w-full h-36 md:m-0 md:h-44 z-0">
       <div class="h-full w-full relative">
-        <div :style='{ backgroundImage: `url(https://solaso77.fr/wp-content/uploads/2021/11/sunrise.jpeg)`}'
+        <div :style='{ backgroundImage: `url(https://solaso77.fr/wp-content/uploads/2021/12/batiment-et-gens-3.jpeg)`}'
              class="filter brightness-50 bg-no-repeat bg-cover top-0 bg-top h-full w-full">
         </div>
       </div>
     </div>
 
-    <main class="container mt-24 mb-5 w-full max-w-full custom-margin z-20 bg-transparent myscrollbar2">
-      <iframe id="donation" allowtransparency="true" scrolling="auto" class="mb-10"
+    <main class="container mt-28 mb-5 w-full max-w-full custom-margin z-20 bg-transparent myscrollbar2">
+      <iframe id="donation" allowtransparency="true" scrolling="auto"
               src="https://www.helloasso.com/associations/solaso77/formulaires/3/widget"
-              style="display: block;width:100%;height:1700px;border:none;" onload="window.scroll(0, this.offsetTop)">
+              style="display: block;width:100%;height:1700px;border:none;">
       </iframe>
 
       <iframe width="540" height="305" id="contact"
@@ -34,7 +34,12 @@ export default {
   },
   computed: {},
   created() {
-  }
+  },
+  methods:{
+    scrollToTop() {
+      window.scrollTo(0,0);
+    },
+  },
 }
 </script>
 
